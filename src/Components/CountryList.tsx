@@ -1,19 +1,10 @@
-import useSWR from "swr";
-import { COUNTRIES_URL } from "../common/constants";
 import { CountryType } from "../common/types";
 
-const fetcher = (url: string) => fetch(url).then((response) => response.json());
+type CountryListProp = {
+  countriesList: CountryType[];
+};
 
-const CountryList = () => {
-  const {
-    data: countriesList,
-    error,
-    isLoading,
-  } = useSWR(COUNTRIES_URL, fetcher);
-
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
-
+const CountryList = ({ countriesList }: CountryListProp) => {
   return (
     <div>
       {countriesList.map((country: CountryType) => (
