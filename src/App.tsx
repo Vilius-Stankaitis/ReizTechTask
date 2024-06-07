@@ -75,10 +75,12 @@ function App() {
   };
   useEffect(orginizeCountriesList, [countriesList, activeFilter, setFilter]);
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  if (isLoading) return <div className="center">Loading...</div>;
+
+  if (error) return <div className="center">Error: {error.message}</div>;
+
   if (!countriesList?.length || !filteredCountries?.length)
-    return <div>No countries</div>;
+    return <div className="center">No countries</div>;
 
   const startIndex = (pageIndex - 1) * COUNTRIES_SIZE_PER_PAGE;
   const endIndex = startIndex + COUNTRIES_SIZE_PER_PAGE;
