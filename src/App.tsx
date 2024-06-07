@@ -89,15 +89,15 @@ function App() {
   const filteredCountryList = filteredCountries.slice(startIndex, endIndex);
 
   return (
-    <div className="App">
+    <div id="app">
       <div className="header">
-        <h4 className="title">Reiz Tech task</h4>
+        <h4 className="title">Reiz Tech Task</h4>
       </div>
 
-      <div>
-        <Button variant="outline" onClick={() => toggleFilter(!modalState)}>
+      <div className="filter">
+        <button onClick={() => toggleFilter(!modalState)}>
           <p>{activeFilter.label}</p>
-        </Button>
+        </button>
       </div>
 
       <div className="content">

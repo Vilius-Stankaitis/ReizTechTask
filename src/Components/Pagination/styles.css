@@ -1,5 +1,36 @@
 #pagination {
   display: flex;
   justify-content: end;
+  align-items: baseline;
+  gap: 10;
   margin: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+#pagination div {
+  gap: 10px;
+}
+
+#pagination p {
+  margin: 0 10px;
+}
+
+#pagination button {
+  padding: 5px 10px;
+  display: flex;
+  background-color: #fcfcfc;
+  border: 1px solid rgb(238, 238, 238);
+  border-radius: 15px;
+  color: rgb(71, 71, 71);
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+#pagination button:hover {
+  background-color: #e5e5e5;
 }
