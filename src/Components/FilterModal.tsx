@@ -24,13 +24,13 @@ const filters: FilterType[] = [
   {
     id: 3,
     type: "radio",
-    label: "Filter: that are in “Oceania” region",
+    label: "Filter: countries in “Oceania” region",
     sortBy: "oceania",
   },
   {
     id: 4,
     type: "radio",
-    label: "Filter: that are smaller than Lithuania by area",
+    label: "Filter: countries smaller than Lithuania",
     sortBy: "lt",
   },
 ];
