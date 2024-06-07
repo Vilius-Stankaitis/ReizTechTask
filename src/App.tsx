@@ -84,7 +84,7 @@ function App() {
   const startIndex = (pageIndex - 1) * COUNTRIES_SIZE_PER_PAGE;
   const endIndex = startIndex + COUNTRIES_SIZE_PER_PAGE;
 
-  const totalPages = countriesList.length / COUNTRIES_SIZE_PER_PAGE;
+  const totalPages = filteredCountries.length / COUNTRIES_SIZE_PER_PAGE;
   const filteredCountryList = filteredCountries.slice(startIndex, endIndex);
 
   return (
@@ -105,7 +105,7 @@ function App() {
         <Pagination
           pageIndex={pageIndex}
           totalPages={totalPages}
-          totalCountriesNumber={countriesList.length}
+          totalCountriesNumber={filteredCountries.length}
           onChangePage={setPageIndex}
         />
       </div>
