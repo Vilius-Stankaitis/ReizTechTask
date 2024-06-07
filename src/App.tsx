@@ -8,7 +8,6 @@ import {
 } from "./common/constants";
 import useSWR from "swr";
 import { CountryType, FilterType } from "./common/types";
-import { Button } from "react-bootstrap";
 import FilterModal from "./Components/FilterModal";
 
 const byAscendingOrder = (countryA: CountryType, countryB: CountryType) =>
